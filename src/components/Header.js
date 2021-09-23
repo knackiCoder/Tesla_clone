@@ -26,7 +26,7 @@ function Header() {
 
             <RightMenu>
                 <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
+                <a href="#">Account</a>
                 <CustomMenu onClick={burgerOpen} />
             </RightMenu>
 
@@ -71,9 +71,17 @@ justify-content: center;
 
 a {
     font-weight: 600;
-    text-transform: uppercase;
     padding: 0 10px;
     flex-wrap: nowrap;
+    font-size: 14px;
+
+
+    &:hover {
+        border-radius: 12px;
+        background-color: #f5f5f540;
+        padding: 10px;
+        transition: background-color .50s ease-in-out;
+    }
 }
 
 @media(max-width: 768px) {
@@ -85,11 +93,11 @@ const RightMenu = styled.div`
 display: flex;
 align-items: center;
 
-    a {
-        font-weight: 600;
-        text-transform: uppercase;
-        margin-right: 10px;
-    }
+a {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 10px;
+}
 `;
 
 const CustomMenu = styled(MenuIcon)`
